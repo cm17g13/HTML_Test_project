@@ -1,0 +1,68 @@
+@CHARSET "ISO-8859-1";
+
+html {
+    background-color: #0a8499;
+    padding: 0px 5px 10px 5px;
+}
+body {
+    background-color: #FFA42F;
+    idth: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 5px 10px 5px;
+}
+
+.headerPanel {
+    color: #3FFF2F;
+}
+
+.mainContent {
+    padding: 0px 5px 10px 5px;
+}
+.navigation {
+    background-color: #B32FFF;
+    color: #FFFFFF;
+}
+.navigation a:link {
+    color: #ffffff;
+}
+.navigation a:visited {
+    color: #ffff00;
+}
+
+#home {
+    font-weight: bold;
+}
+
+.navigation {
+    background-color: #B32FFF;
+    color: #FFFFFF;
+    padding: 0px 0px 0px 0px;
+    width: 100%;
+    display: table;
+}
+.navigation ul {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+.navigation a:visited {
+    color: #0916ff;
+}
+
+.navigation li {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    width: 33.3333%;
+}
+.navigation li:hover {
+    background-color: #3FFF2F;
+}
+.navigation a:link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+
