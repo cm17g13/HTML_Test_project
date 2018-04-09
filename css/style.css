@@ -14,6 +14,7 @@ body {
 
 .headerPanel {
     color: #3FFF2F;
+    text-align: center;
 }
 
 .mainContent {
@@ -23,11 +24,26 @@ body {
     background-color: #B32FFF;
     color: #FFFFFF;
 }
+
 .navigation a:link {
     color: #ffffff;
 }
+
 .navigation a:visited {
     color: #ffff00;
+}
+
+.navigation li {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.navButton {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 #home {
