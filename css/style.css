@@ -4,6 +4,7 @@ html {
     background-color: #0a8499;
     padding: 0px 5px 10px 5px;
 }
+
 body {
     background-color: #FFA42F;
     idth: 80%;
@@ -28,6 +29,9 @@ body {
 .navigation {
     background-color: #B32FFF;
     color: #FFFFFF;
+}
+.mathPanel {
+    padding: 0px 0px 10px 0px;
 }
 
 .navigation a:link {
