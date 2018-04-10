@@ -7,10 +7,11 @@
         <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" />
         <link href="../css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
         <link href="../css/style.css" rel="stylesheet" type="text/css" />
+        <script src="../js/test.js"></script>
 
     </head>
     <body>
-        <h1 class="headerPanel"> Hello World </h1>
+        <h1 class="headerPanel" id="title"> Hello World </h1>
         <div class="mainContent">
             <div class="navigation">
                 <ul>
@@ -24,11 +25,13 @@
             <p> Welcome to this website, its not good but its something. </p>
             <p> Take a look around. There's steamed hams </p>
         </div>
-        <div class="image-pane">
+        <div class="imagePane">
             <p> This is an example image, as a clickable link </p>
             <a href="http://knowyourmeme.com/memes/steamed-hams">
-                <img src="http://i0.kym-cdn.com/entries/icons/original/000/022/898/827.jpg">
+                <img id="steamedHams" src="http://i0.kym-cdn.com/entries/icons/original/000/022/898/827.jpg">
             </a>
         </div>
+        <button id="bigButton" type="button" class="btn btn-primary btn-lg btn-block" onclick="buttonClick('steamedHams');">Big Button</button>
+        <button id="Button" type="button" class="btn btn-primary btn-lg btn-block" onclick="colourButton('title');">Button</button>
     </body>
 </html>
