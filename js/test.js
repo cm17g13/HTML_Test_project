@@ -2,11 +2,7 @@
 //    document.getElementById("bigButton").innerText = "You clicked the button didn't you?";
 //}
 
-var Person = {
-    name: "Tib",
-    job: "Programmer",
-    age: 25
-}
+var person;
 
 function buttonClick(id) {
     var element = document.getElementById(id);
@@ -18,27 +14,37 @@ function buttonClick(id) {
 }
 
 function changePerson() {
-    var name = document.getElementById("personName").value.replace(/ /g,'');
-    var job = document.getElementById("personJob").value.replace(/ /g,'');
-    var age= document.getElementById("personAge").value.replace(/ /g,'');
-    if((name != null) && (name != "")) {
-        Person.name = name;
-    }
-    if((job != null) && (job != "")) {
-        Person.job = job;
-    }
-    if((age != null) && (age != "")) {
-        Person.age = age;
+    var name = document.getElementById("personName").value.replace(/ /g, '');
+    var job = document.getElementById("personJob").value.replace(/ /g, '');
+    var age = document.getElementById("personAge").value.replace(/ /g, '');
+
+    if(person != null) {
+        if ((name != null) && (name != "")) {
+            person.name = name;
+        }
+        if ((job != null) && (job != "")) {
+            person.job = job;
+        }
+        if ((age != null) && (age != "")) {
+            person.age = age;
+        }
+    } else {
+        person = {
+            name: name,
+            job: job,
+            age: age,
+            quote: "He said \"My name is Elliott\"".toUpperCase()
+        }
     }
     getPersonInfo();
 }
 
 function getPersonInfo() {
-    document.getElementById("personInfo").innerHTML = "Person's name: " + Person.name+ ", Job: "+ Person.job + ", Age: " + Person.age
+    document.getElementById("personInfo").innerHTML = "Person's name: " + person.name+ ", Job: "+ person.job + ", Age: " + person.age
 }
 
 function increaseAge() {
-    Person.age = +Person.age + 1;
+    person.age = +person.age + 1;
     getPersonInfo();
 }
 
@@ -47,7 +53,8 @@ function colourButton(id) {
 
     var element = document.getElementById(id);
     element.style.color = getRandomColor();
-    element.style.backgroundColor = getRandomColor();
+    //document.body.style.backgroundColor = getRandomColor();
+    document.body.classList.toggle("change");
 }
 
 function calculate() {

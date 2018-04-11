@@ -7,20 +7,83 @@ html {
 
 body {
     background-color: #FFA42F;
-    idth: 80%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     padding: 0px 5px 10px 5px;
 }
 
+/*body:hover {
+    background-color: #AD310B;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+}*/
+.change {
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+    background-size: 1800% 1800%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 5px 10px 5px;
+
+    -webkit-animation: rainbow 18s ease infinite;
+    -z-animation: rainbow 18s ease infinite;
+    -o-animation: rainbow 18s ease infinite;
+    animation: rainbow 18s ease infinite;}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
 .headerPanel {
     color: #3FFF2F;
-    text-align: center;
+    float: none;
+    font-size: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
 }
 
 .imagePane {
     padding: 0px 0px 10px 0px;
     color: #0f0f0f;
+}
+
+.dynamicButtons {
+    display: table-cell;
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottem: 5px;
+}
+
+.dynamicButtons button {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+
 }
 
 .mainContent {

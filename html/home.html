@@ -11,7 +11,7 @@
 
     </head>
     <body onload="getPersonInfo();">
-        <h1 class="headerPanel" id="title"> Hello World </h1>
+        <marquee class="headerPanel" id="title"> Hello World </marquee>
         <div class="mainContent">
             <div class="navigation">
                 <ul>
@@ -31,9 +31,9 @@
                 <img id="steamedHams" src="http://i0.kym-cdn.com/entries/icons/original/000/022/898/827.jpg" height="300px">
             </a>
         </div>
-        <div class="buttonPanel">
-            <button id="bigButton" type="button" class="btn btn-primary btn-lg btn-block" onclick="buttonClick('steamedHams');">Switch image</button>
-            <button id="Button" type="button" class="btn btn-primary btn-lg btn-block" onclick="colourButton('title');">Change colour</button>
+        <div class="dynamicButtons">
+            <button id="bigButton" type="button" class="btn btn-primary btn-lg" onclick="buttonClick('steamedHams');">Switch image</button>
+            <button id="Button" type="button" class="btn btn-primary btn-lg" onclick="colourButton('title');">Change colour</button>
         </div>
         <div class="mathPanel">
             <div class="square">
@@ -47,15 +47,16 @@
                 <input id="sumNumber3" type="number"/>
             </div>
             <button class="btn btn-primary btn-lg btn-block" onclick="calculate();">Do the maths</button>
-            <div class="MathsPanel">
-                <p id="personInfo"> Person's name: ,Person's Job: , Perosn's Age:  </p>
+            <div class="mathPanel">
+                <p id="personInfo"> Person has no info yet  </p>
                 <input id="personName" type="text"/>
                 <input id="personJob" type="text"/>
                 <input id="personAge" type="number"/>
             </div>
-            <button class="btn btn-primary btn-lg btn-block" onclick="changePerson();">Change Person's Info</button>
-            <button class="btn btn-primary btn-lg btn-block" onclick="increaseAge();">Age the Person?</button>
-
+            <div class="dynamicButtons">
+                <button class="btn btn-primary btn-lg" onclick="changePerson();">Change Person's Info</button>
+                <button class="btn btn-primary btn-lg" onclick="increaseAge();">Age the Person?</button>
+            </div>
         </div>
 
     </body>
