@@ -39,6 +39,44 @@ function changePerson() {
     getPersonInfo();
 }
 
+function string2() {
+    document.getElementById("string2").innerHTML = document.getElementById("string2").innerHTML + 1;
+
+}
+
+function arrays1() {
+    var el = document.getElementById("arrays1");
+    var strings = ["String1", "String2", "String3"];
+    el.innerHTML = strings;
+    strings.push("String4");
+    el.innerHTML = strings;
+    strings.splice(strings.length - 1, 1);
+    el.innerHTML = strings;
+
+}
+
+function conditionals1() {
+    var el = document.getElementById("ageCheck")
+    var check;
+    if(person != null ) {
+        if (person.age >= 20 && person.age <= 40) {
+            check = true;
+        } else {
+            check = false;
+        }
+        el.innerHTML = "The current person is between 20 and 40 years old? " + check;
+    }
+}
+
+function iteration1() {
+    var el = document.getElementById("iteration1");
+    for(var i = 1; i <= 10; i++) {
+        el.innerHTML = i;
+        //to prove that it works, and should update it but doesnt.
+        console.log(i)
+    }
+}
+
 function getPersonInfo() {
     document.getElementById("personInfo").innerHTML = "Person's name: " + person.name+ ", Job: "+ person.job + ", Age: " + person.age
 }
@@ -62,6 +100,10 @@ function calculate() {
     document.getElementById("squareOutput").innerHTML = " Input number you want to square, Output: " + number1*number1;
     var sum = +document.getElementById("sumNumber1").value + +document.getElementById("sumNumber2").value + +document.getElementById("sumNumber3").value;
     document.getElementById("sumOutput").innerHTML = " Input 3 numbers, and ill add them up, Output: " + sum;
+    string2();
+    arrays1();
+    conditionals1();
+    iteration1();
 }
 
 function getRandomColor() {

@@ -20,17 +20,17 @@ body {
     transition: background-color 1000ms linear;
 }*/
 .change {
-    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-    background-size: 1800% 1800%;
+    background: linear-gradient(128deg, #ff1000, #ff1000, #ff1000, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3, #dd00f3, #dd00f3);
+    background-size: 1500% 1500%;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
     padding: 0px 5px 10px 5px;
 
-    -webkit-animation: rainbow 18s ease infinite;
-    -z-animation: rainbow 18s ease infinite;
-    -o-animation: rainbow 18s ease infinite;
-    animation: rainbow 18s ease infinite;}
+    -webkit-animation: rainbow 20s ease infinite;
+    -z-animation: rainbow 20s ease infinite;
+    -o-animation: rainbow 20s ease infinite;
+    animation: rainbow 20s ease infinite;}
 
 @-webkit-keyframes rainbow {
     0%{background-position:0% 82%}
@@ -73,7 +73,6 @@ body {
     text-align: center;
     width: 100%;
     margin-top: 5px;
-    margin-bottem: 5px;
 }
 
 .dynamicButtons button {
@@ -83,6 +82,7 @@ body {
     float: left;
     margin-left: 5px;
     margin-right: 5px;
+    margin-bottom: 10px;
 
 }
 

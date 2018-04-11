@@ -10,7 +10,7 @@
         <script src="../js/test.js"></script>
 
     </head>
-    <body onload="getPersonInfo();">
+    <body>
         <marquee class="headerPanel" id="title"> Hello World </marquee>
         <div class="mainContent">
             <div class="navigation">
@@ -46,9 +46,8 @@
                 <input id="sumNumber2" type="number"/>
                 <input id="sumNumber3" type="number"/>
             </div>
-            <button class="btn btn-primary btn-lg btn-block" onclick="calculate();">Do the maths</button>
             <div class="mathPanel">
-                <p id="personInfo"> Person has no info yet  </p>
+                <p id="personInfo"> Person has no info yet (Name, Job, age) </p>
                 <input id="personName" type="text"/>
                 <input id="personJob" type="text"/>
                 <input id="personAge" type="number"/>
@@ -57,6 +56,11 @@
                 <button class="btn btn-primary btn-lg" onclick="changePerson();">Change Person's Info</button>
                 <button class="btn btn-primary btn-lg" onclick="increaseAge();">Age the Person?</button>
             </div>
+            <p id="string2">String2 test</p>
+            <p id="arrays1">Array1 test</p>
+            <p id="ageCheck">The current person is between 20 and 40 years old?</p>
+            <p id="iteration1">Current iteration goes here</p>
+            <button class="btn btn-primary btn-lg btn-block" onclick="calculate();">Test Functions</button>
         </div>
 
     </body>
