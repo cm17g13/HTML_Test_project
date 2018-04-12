@@ -81,7 +81,6 @@ function iteration1() {
             }
             //el.innerHTML = i;
             //to prove that it works, and should update it but doesnt.
-
         }
     }
     el.innerHTML = numbers;
@@ -102,6 +101,46 @@ function iteration3(max, string1, string2) {
         }
         console.log(output);
 
+    }
+}
+
+function iteration4(num, iter) {
+    if(iter == undefined) {
+        iter = 0;
+    }
+
+    console.log("The number is: " + num+ " iterations: " + iter);
+    if(num != 1) {
+        var remainder = num % 3;
+        iter += 1
+        if (remainder == 0) {
+            num = num / 3;
+            iteration4(num, iter);
+        } else if (remainder == 1) {
+            iteration4(+num - 1, iter);
+        } else {
+            iteration4(+num + 1, iter);
+        }
+    }
+}
+
+function grid() {
+    for ()
+}
+
+function string4(word, count) {
+    if(count == undefined) {
+        count = 0;
+    }
+    if(word.length < 3) {
+        console.log("There were " + count + " triple's");
+    } else {
+        var currentLetter = word[0];
+
+        if(currentLetter == word[1] && currentLetter == word[2]) {
+            count = +count + 1;
+        }
+        string4(word.substring(1, word.length ), count);
     }
 }
 
@@ -134,6 +173,9 @@ function calculate() {
     conditionals1();
     iteration1();
     iteration3(100, "Fizz", "Buzz");
+    iteration4(1000);
+    //string4("abcXXXabc");
+    string4("xxxabyyyycd");
 
 }
 
