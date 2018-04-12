@@ -70,12 +70,41 @@ function conditionals1() {
 
 function iteration1() {
     var el = document.getElementById("iteration1");
+    var numbers = "";
     for(var i = 1; i <= 10; i++) {
-        el.innerHTML = i;
-        //to prove that it works, and should update it but doesnt.
-        console.log(i)
+        if(i % 2 === 0) {
+            if(numbers.length > 0) {
+                console.log(i)
+                numbers = numbers + ", " + i;
+            } else {
+                numbers = i.toString();
+            }
+            //el.innerHTML = i;
+            //to prove that it works, and should update it but doesnt.
+
+        }
+    }
+    el.innerHTML = numbers;
+}
+
+function iteration3(max, string1, string2) {
+    for(var i = 1; i <= max; i++) {
+        var output = "";
+        if(i % 3 == 0) {
+            //output = output + string1, to make sure that if string1 is an int, that output is still a string
+            output +=string1;
+        }
+        if(i % 5 == 0) {
+            output += string2;
+        }
+        if(output.length == 0) {
+            output = i.toString();
+        }
+        console.log(output);
+
     }
 }
+
 
 function getPersonInfo() {
     document.getElementById("personInfo").innerHTML = "Person's name: " + person.name+ ", Job: "+ person.job + ", Age: " + person.age
@@ -104,6 +133,8 @@ function calculate() {
     arrays1();
     conditionals1();
     iteration1();
+    iteration3(100, "Fizz", "Buzz");
+
 }
 
 function getRandomColor() {
