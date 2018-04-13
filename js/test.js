@@ -124,10 +124,6 @@ function iteration4(num, iter) {
     }
 }
 
-function grid() {
-    for ()
-}
-
 function string4(word, count) {
     if(count == undefined) {
         count = 0;
@@ -141,6 +137,50 @@ function string4(word, count) {
             count = +count + 1;
         }
         string4(word.substring(1, word.length ), count);
+    }
+}
+
+function paragraph() {
+    var el = document.getElementById("newP");
+    if(!el) {
+        var p = document.createElement("p");
+        var t = document.createTextNode(document.getElementById("createPara").value);
+        p.appendChild(t);
+        p.id = "newP";
+
+        var element = document.getElementById("addPara");
+        element.appendChild(p);
+    } else {
+        el.innerText = document.getElementById("editPara").value;
+    }
+}
+
+function rektangles(word, width, height) {
+    var grid = new Array(width);
+    for (var i = 0; i < width; i++) {
+        grid[i] = new Array(height);
+    }
+    //0, 3, 6, 9
+    //0, word.length - 1, 2*(word.length - 1)
+    
+    fillBlanks(grid, );
+}
+
+
+function reverseString(str) {
+    var splitString = str.split("");
+    var reverseArray = splitString.reverse();
+    var joinArray = reverseArray.join("");
+    return joinArray;
+}
+
+function fillBlanks(grid, width, height) {
+    for(let i = 0; i < width; i++) {
+        for(let j = 0; j < height; j++) {
+            if(grid[i][j] == undefined) {
+                gird[i][j] = " ";
+            }
+        }
     }
 }
 
@@ -176,6 +216,8 @@ function calculate() {
     iteration4(1000);
     //string4("abcXXXabc");
     string4("xxxabyyyycd");
+    paragraph();
+    rektangles("rekt", 1, 1);
 
 }
 
