@@ -156,32 +156,92 @@ function paragraph() {
 }
 
 function rektangles(word, width, height) {
-    var grid = new Array(width);
-    for (var i = 0; i < width; i++) {
-        grid[i] = new Array(height);
+    //word length = 4
+    //width = 4
+    //4 + 3 + 3 + 3 
+    let widthDistance = width*(word.length-1) + 1;
+    let heightDistance = height*(word.length-1) + 1;
+
+
+    let grid = new Array(widthDistance);
+    for (let i = 0; i < widthDistance; i++) {
+        grid[i] = new Array(heightDistance);
     }
+   
+    let stringWidth1 = makeString(word, width);
+    let stringWidth2 = makeString(reverseString(word), width);
+    let stringHeight1 = makeString(word, height);
+    let stringHeight2 = makeString(reverseString(word), height);
+
+
     //0, 3, 6, 9
     //0, word.length - 1, 2*(word.length - 1)
-    
-    fillBlanks(grid, );
+    //R E K T K E R
+    //E     K     E
+    //K     E     K
+    //T K E R E K T 
+
+    for(let i = 0; i < widthDistance; i++) {
+        if(i % (2*(word.length - 1)) == 0) {
+           grid = fillGrid(grid, stringWidth1, "right", i);
+        } else if(i % (word.length - 1) == 0) {
+           grid = fillGrid(grid, stringWidth2, "right", i);
+        }
+    }
+
+    for(let j = 0; j < heightDistance; j++) {
+        if(j % (2*(word.length - 1)) == 0) {
+           grid = fillGrid(grid, stringHeight1, "down", j);
+        } else if(j % (word.length - 1) == 0) {
+           grid = fillGrid(grid, stringHeight2, "down", j);
+        }
+    }
+
+    console.log(fillBlanks(grid, widthDistance, heightDistance));
+}
+
+function fillGrid(grid, str, direction, location) {
+    if(direction == "right") {
+        for(let x = 0; x < str.length; x++) {
+            grid[x][location] = str[x];
+        }
+    } else {
+        for(let y = 0; y < str.length; y++) {
+            grid[location][y] = str[y];
+        }
+    }
+    return grid;
 }
 
 
 function reverseString(str) {
-    var splitString = str.split("");
-    var reverseArray = splitString.reverse();
-    var joinArray = reverseArray.join("");
+    let splitString = str.split("");
+    let reverseArray = splitString.reverse();
+    let joinArray = reverseArray.join("");
     return joinArray;
+}
+
+function makeString(word, length) {
+    let output = word;
+    for(let i = 1; i < length; i++) {
+        if(i % 2 == 1) {
+            output = output + reverseString(word.substring(0, (word.length - 1)));
+        } else {
+            output = output + word.substring(1, word.length);
+        }  
+    }
+    return output;
 }
 
 function fillBlanks(grid, width, height) {
     for(let i = 0; i < width; i++) {
         for(let j = 0; j < height; j++) {
-            if(grid[i][j] == undefined) {
-                gird[i][j] = " ";
+            if(grid[i][j] == null) {
+                grid[i][j] = " ";
             }
         }
     }
+    return grid;
 }
 
 
@@ -217,7 +277,7 @@ function calculate() {
     //string4("abcXXXabc");
     string4("xxxabyyyycd");
     paragraph();
-    rektangles("rekt", 1, 1);
+    rektangles("REKT", 1, 1);
 
 }
 
