@@ -183,17 +183,17 @@ function rektangles(word, width, height) {
 
     for(let i = 0; i < widthDistance; i++) {
         if(i % (2*(word.length - 1)) == 0) {
-           grid = fillGrid(grid, stringWidth1, "right", i);
+           grid = fillGrid(grid, stringWidth2, "right", ((widthDistance -1) - i));
         } else if(i % (word.length - 1) == 0) {
-           grid = fillGrid(grid, stringWidth2, "right", i);
+           grid = fillGrid(grid, stringWidth1, "right", ((widthDistance -1) - i));
         }
     }
 
     for(let j = 0; j < heightDistance; j++) {
         if(j % (2*(word.length - 1)) == 0) {
-           grid = fillGrid(grid, stringHeight1, "down", j);
+           grid = fillGrid(grid, stringHeight2, "down", ((heightDistance-1) - j));
         } else if(j % (word.length - 1) == 0) {
-           grid = fillGrid(grid, stringHeight2, "down", j);
+           grid = fillGrid(grid, stringHeight1, "down", ((heightDistance-1) - j));
         }
     }
 
